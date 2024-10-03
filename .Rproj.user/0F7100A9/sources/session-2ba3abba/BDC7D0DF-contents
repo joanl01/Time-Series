@@ -1,4 +1,0 @@
-jason1 %>% ggplot(aes(x = ...1, y = `right ascension`)) + geom_point() + theme_bw() 
-
-jason2 %>% ggplot(aes(x = ...1, y = inclination)) + geom_point() + 
-  theme_bw()
