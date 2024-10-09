@@ -1,8 +1,7 @@
 pacman::p_load(tidyverse, lubridate)
 
-read.table(here::here("satellite_data","manoeuvres", "ja1man.txt"))
 # Read the data
-tle_data <- readLines(here::here("satellite_data","manoeuvres", "cs2man.txt"))
+tle_data <- readLines(here::here("satellite_data","manoeuvres", "ja1man.txt"))
 
 # Split data by multiple spaces using read.table
 tle_parsed <- read.table(text = tle_data, header = FALSE, fill = TRUE, 
