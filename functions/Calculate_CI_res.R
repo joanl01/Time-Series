@@ -5,5 +5,5 @@ calculate_CI_res <- function(res, sig_lvl = 0.05){
   
   CI_low <- mean_res - qnorm(1- sig_lvl) * sd_res / sqrt(n)
   CI_up  <- mean_res + qnorm(1-sig_lvl) * sd_res / sqrt(n)
-  
+  return(c(CI_low, CI_up))
 }
