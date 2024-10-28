@@ -17,7 +17,7 @@ sent3a_arima <- map(sent3a_params, auto.arima)
 sent6a_arima <- map(sent6a_params, auto.arima)
 sent3b_arima <- map(sent3b_params, auto.arima)
 
-# Plot original vs fitted for each parameter (Jason-1 example)
+# Plot original vs fitted for each parameter (Sentinel-3A example)
 sent3a_fitted <- map(sent3a_arima, ~ .x$fitted)
 sent3a_params_names <- names(sent3a_params)
 for (i in seq_along(sent3a_params_names)) {
@@ -26,13 +26,13 @@ for (i in seq_along(sent3a_params_names)) {
           ylab = sent3a_params_names[i])
 }
 
-# Calculate confidence intervals for all parameters in Jason-1
+# Calculate confidence intervals for all parameters in Sentinel3A
 sent3a_CIs <- map(sent3a_arima, calculate_CI)
 sent3a_CI_df <- sent3a_CIs %>%
   set_names(names(sent3a_arima)) %>%
   map_df(~ tibble(CI_low = .[1], CI_up = .[2]), .id = "parameter")
 
-# Similarly, calculate confidence intervals for Jason-2 and Sentinel-3B
+# Similarly, calculate confidence intervals for Sentinel-6A and Sentinel-3B
 sent6a_CIs <- map(sent6a_arima, calculate_CI)
 sent6a_CI_df <- sent6a_CIs %>%
   set_names(names(sent6a_arima)) %>%
@@ -43,10 +43,10 @@ sent3b_CI_df <- sent3b_CIs %>%
   set_names(names(sent3b_arima)) %>%
   map_df(~ tibble(CI_low = .[1], CI_up = .[2]), .id = "parameter")
 
-# Apply to the Jason-1 dataset (Process residuals and flags)
+# Apply to the Sentinel-3A dataset (Process residuals and flags)
 sent3a_res_data <- process_residuals_and_flags(sent3a_arima)
 
-# Similarly, apply to Jason-2 and Sentinel-3B
+# Similarly, apply to Sentinel-6A and Sentinel-3B
 sent6a_res_data <- process_residuals_and_flags(sent6a_arima)
 sent3b_res_data <- process_residuals_and_flags(sent3b_arima)
 
