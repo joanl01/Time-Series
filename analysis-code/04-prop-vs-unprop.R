@@ -35,3 +35,24 @@ parameters <- c("eccentricity", "argument of perigee", "inclination",
 sent3a_res <- add_flag_columns(sent3a_res, CI_sent3a_res, parameters)
 sent6a_res <- add_flag_columns(sent6a_res, CI_sent6a_res, parameters)
 sent3b_res <- add_flag_columns(sent3b_res, CI_sent3b_res, parameters)
+
+
+sent3a_res$date <- as.Date(sent3a$...1[-1])
+sent3a_res$...1 <- sent3a$...1[-1]
+names(sent3a_res)[1] <- "datetime"
+sent3a_res
+
+sent6a_res$date <- as.Date(sent6a$...1[-1])
+sent6a_res$...1 <- sent6a$...1[-1]
+names(sent6a_res)[1] <- "datetime"
+sent6a_res
+
+
+sent3b_res$date <- as.Date(sent3b$...1[-1])
+sent3b_res$...1 <- sent3b$...1[-1]
+names(sent3b_res)[1] <- "datetime"
+sent3b_res
+
+
+
+

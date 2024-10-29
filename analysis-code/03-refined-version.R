@@ -50,3 +50,6 @@ sent3a_res_data <- process_residuals_and_flags(sent3a_arima)
 sent6a_res_data <- process_residuals_and_flags(sent6a_arima)
 sent3b_res_data <- process_residuals_and_flags(sent3b_arima)
 
+sent3a_res_data$date <- as.Date(sent3a$...1)
+sent6a_res_data$date <- as.Date(sent6a$...1)
+sent3b_res_data$date <- as.Date(sent3b$...1)

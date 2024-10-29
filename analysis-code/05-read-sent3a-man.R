@@ -52,7 +52,7 @@ colnames(tle_parsed) <- c("satellite_name",     # Col 1: Satellite identificatio
                           "delta_acc_1_burn2",  # Col 39: delta acc(1) wrt prediction (10-6m/s2)[E20.13]
                           "delta_acc_2_burn2",  # Col 40: delta acc(2) wrt prediction (10-6m/s2)[E20.13]
                           "delta_acc_3_burn2" # Col 41: delta acc(3) wrt prediction (10-6m/s2)[E20.13]
-                          )
+)
 # View the renamed columns
 head(tle_parsed)
 
@@ -67,4 +67,4 @@ tle_parsed$end_man_datetime <- as_datetime(paste0(tle_parsed$end_man_year, "-01-
 print(tle_parsed)
 
 tle_parsed_time <- tle_parsed |> select(beg_man_datetime, end_man_datetime)
-tle_parsed_time <- tle_parsed_time %>% mutate(date = as.Date(end_man_datetime))
+sent3a_tle_parsed_time <- tle_parsed_time %>% mutate(date = as.Date(end_man_datetime))
