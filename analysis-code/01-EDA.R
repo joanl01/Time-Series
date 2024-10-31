@@ -42,7 +42,9 @@ skimr::skim(sent3b)
 sent3a |> ggplot(aes(x = ...1, y = eccentricity)) + geom_point() +
   labs(title = "Eccentricity of Sentinel-3A satellite over time", 
        x  = "Time",
-       y = "Eccentricity") + theme_bw()
+       y = "Eccentricity") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                axis.text = element_text(size = 30),
+                                                axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3A-Eccentricity-vs-time.pdf"),
@@ -55,7 +57,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3a |> ggplot(aes(x = ...1, y = `argument of perigee`)) + geom_point() +
   labs(title = "Argument of Perigee of Sentinel-3A satellite over time", 
        x  = "Time",
-       y = "Argument of Perigee") + theme_bw()
+       y = "Argument of Perigee") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                      axis.text = element_text(size = 30),
+                                                      axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3A-Argument-of-Perigee-vs-time.pdf"),
@@ -69,7 +73,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3a |> ggplot(aes(x = ...1, y = inclination)) + geom_point() +
   labs(title = "Inclination of Sentinel-3A satellite over time", 
        x  = "Time",
-       y = "Inclination") + theme_bw()
+       y = "Inclination") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                               axis.text = element_text(size = 30),
+                                               axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3A-Inclination-vs-time.pdf"),
@@ -82,7 +88,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3a |> ggplot(aes(x = ...1, y = `mean anomaly`)) + geom_point() +
   labs(title = "Mean Anomaly of Sentinel-3A satellite over time", 
        x  = "Time",
-       y = "Mean Anomaly") + theme_bw()
+       y = "Mean Anomaly") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                axis.text = element_text(size = 30),
+                                                axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3A-Mean-Anomaly-vs-time.pdf"),
@@ -96,7 +104,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3a |> ggplot(aes(x = ...1, y = `Brouwer mean motion`)) + geom_point() +
   labs(title = "Brouwer Mean Motion of Sentinel-3A satellite over time", 
        x  = "Time",
-       y = "Brouwer Mean Motion") + theme_bw()
+       y = "Brouwer Mean Motion") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                       axis.text = element_text(size = 30),
+                                                       axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3A-Brouwer-Mean_Motion-vs-time.pdf"),
@@ -111,7 +121,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3a |> ggplot(aes(x = ...1, y = `right ascension`)) + geom_point() +
   labs(title = "Right Ascension of Sentinel-3A satellite over time", 
        x  = "Time",
-       y = "Right Ascension") + theme_bw()
+       y = "Right Ascension") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                   axis.text = element_text(size = 30),
+                                                   axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3A-Right-Ascension-vs-time.pdf"),
@@ -129,7 +141,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent6a |> ggplot(aes(x = ...1, y = eccentricity)) + geom_point() +
   labs(title = "Eccentricity of Sentinel-6A satellite over time", 
        x  = "Time",
-       y = "Eccentricity") + theme_bw()
+       y = "Eccentricity") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                axis.text = element_text(size = 30),
+                                                axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-6A-Eccentricity-vs-time.pdf"),
@@ -142,7 +156,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent6a |> ggplot(aes(x = ...1, y = `argument of perigee`)) + geom_point() +
   labs(title = "Argument of Perigee of Sentinel-6A satellite over time", 
        x  = "Time",
-       y = "Argument of Perigee") + theme_bw()
+       y = "Argument of Perigee") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                       axis.text = element_text(size = 30),
+                                                       axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-6A-Argument-of-Perigee-vs-time.pdf"),
@@ -156,7 +172,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent6a |> ggplot(aes(x = ...1, y = inclination)) + geom_point() +
   labs(title = "Inclination of Sentinel-6A satellite over time", 
        x  = "Time",
-       y = "Inclination") + theme_bw()
+       y = "Inclination") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                               axis.text = element_text(size = 30),
+                                               axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-6A-Inclination-vs-time.pdf"),
@@ -169,7 +187,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent6a |> ggplot(aes(x = ...1, y = `mean anomaly`)) + geom_point() +
   labs(title = "Mean Anomaly of Sentinel-6A satellite over time", 
        x  = "Time",
-       y = "Mean Anomaly") + theme_bw()
+       y = "Mean Anomaly") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                axis.text = element_text(size = 30),
+                                                axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-6A-Mean-Anomaly-vs-time.pdf"),
@@ -183,7 +203,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent6a |> ggplot(aes(x = ...1, y = `Brouwer mean motion`)) + geom_point() +
   labs(title = "Brouwer Mean Motion of Sentinel-6A satellite over time", 
        x  = "Time",
-       y = "Brouwer Mean Motion") + theme_bw()
+       y = "Brouwer Mean Motion") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                       axis.text = element_text(size = 30),
+                                                       axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-6A-Brouwer-Mean_Motion-vs-time.pdf"),
@@ -198,7 +220,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent6a |> ggplot(aes(x = ...1, y = `right ascension`)) + geom_point() +
   labs(title = "Right Ascension of Sentinel-6A satellite over time", 
        x  = "Time",
-       y = "Right Ascension") + theme_bw()
+       y = "Right Ascension") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                   axis.text = element_text(size = 30),
+                                                   axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-6A-Right-Ascension-vs-time.pdf"),
@@ -214,7 +238,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3b |> ggplot(aes(x = ...1, y = eccentricity)) + geom_point() +
   labs(title = "Eccentricity of Sentinel-3B satellite over time", 
        x  = "Time",
-       y = "Eccentricity") + theme_bw()
+       y = "Eccentricity") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                axis.text = element_text(size = 30),
+                                                axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3B-Eccentricity-vs-time.pdf"),
@@ -227,7 +253,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3b |> ggplot(aes(x = ...1, y = `argument of perigee`)) + geom_point() +
   labs(title = "Argument of Perigee of Sentinel-3B satellite over time", 
        x  = "Time",
-       y = "Argument of Perigee") + theme_bw()
+       y = "Argument of Perigee") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                       axis.text = element_text(size = 30),
+                                                       axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3B-Argument-of-Perigee-vs-time.pdf"),
@@ -241,7 +269,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3b |> ggplot(aes(x = ...1, y = inclination)) + geom_point() +
   labs(title = "Inclination of Sentinel-3B satellite over time", 
        x  = "Time",
-       y = "Inclination") + theme_bw()
+       y = "Inclination") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                               axis.text = element_text(size = 30),
+                                               axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3B-Inclination-vs-time.pdf"),
@@ -254,7 +284,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3b |> ggplot(aes(x = ...1, y = `mean anomaly`)) + geom_point() +
   labs(title = "Mean Anomaly of Sentinel-3B satellite over time", 
        x  = "Time",
-       y = "Mean Anomaly") + theme_bw()
+       y = "Mean Anomaly") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                axis.text = element_text(size = 30),
+                                                axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3B-Mean-Anomaly-vs-time.pdf"),
@@ -268,7 +300,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3b |> ggplot(aes(x = ...1, y = `Brouwer mean motion`)) + geom_point() +
   labs(title = "Brouwer Mean Motion of Sentinel-3B satellite over time", 
        x  = "Time",
-       y = "Brouwer Mean Motion") + theme_bw()
+       y = "Brouwer Mean Motion") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                       axis.text = element_text(size = 30),
+                                                       axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3B-Brouwer-Mean_Motion-vs-time.pdf"),
@@ -283,7 +317,9 @@ ggsave(here::here("pretty-pictures", "EDA-plots",
 sent3b |> ggplot(aes(x = ...1, y = `right ascension`)) + geom_point() +
   labs(title = "Right Ascension of Sentinel-3B satellite over time", 
        x  = "Time",
-       y = "Right Ascension") + theme_bw()
+       y = "Right Ascension") + theme_bw() + theme(plot.title = element_text(size = 30),
+                                                   axis.text = element_text(size = 30),
+                                                   axis.title = element_text(size = 30))
 # Save plot in the pretty pictures folder, in the EDA plots directory
 ggsave(here::here("pretty-pictures", "EDA-plots", 
                   "Sentinel-3B-Right-Ascension-vs-time.pdf"),

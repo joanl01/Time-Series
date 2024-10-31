@@ -1,5 +1,5 @@
 # Load required packages
-pacman::p_load(tidyverse, tseries, forecast, here, readr, skimr)
+pacman::p_load(tidyverse, tseries, forecast, here, readr, skimr, lubridate)
 fs::dir_ls(here::here("functions")) |> walk(source)
 
 # Read in unpropagated data of desired satellites
@@ -12,6 +12,8 @@ sent3a <- sent3a[-1:-301,]
 sent6a <- sent6a[-1:-24,]
 sent3b <- sent3b[-1:-231,]
 
+
+sent3a <- sent3a %>% mutate(year = year(...1)) %>% filter(year < 2022)
 
 # Convert each parameter to time series
 sent3a_params <- ts_params(sent3a)
