@@ -6,6 +6,12 @@ fs::dir_ls(here::here("functions")) |> walk(source)
 sent3a <- read_csv(here::here("satellite_data", "orbital_elements", "unpropagated_elements_Sentinel-3A.csv"))
 sent3b <- read_csv(here::here("satellite_data", "orbital_elements", "unpropagated_elements_Sentinel-3B.csv"))
 sent6a <- read_csv(here::here("satellite_data", "orbital_elements", "unpropagated_elements_Sentinel-6A.csv"))
+# Take off first 60 days of data
+
+sent3a <- sent3a[-1:-301,]
+sent6a <- sent6a[-1:-24,]
+sent3b <- sent3b[-1:-231,]
+
 
 # Convert each parameter to time series
 sent3a_params <- ts_params(sent3a)

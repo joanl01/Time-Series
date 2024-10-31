@@ -59,10 +59,10 @@ head(tle_parsed)
 
 # Create beginning and end maneuver datetime
 tle_parsed$beg_man_datetime <- as_datetime(paste0(tle_parsed$beg_man_year, "-01-01")) +
-  days(tle_parsed$beg_man_day-1) + hours(tle_parsed$beg_man_hour) + minutes(tle_parsed$beg_man_min)
+  days(tle_parsed$beg_man_day) + hours(tle_parsed$beg_man_hour) + minutes(tle_parsed$beg_man_min)
 
 tle_parsed$end_man_datetime <- as_datetime(paste0(tle_parsed$end_man_year, "-01-01")) +
-  days(tle_parsed$end_man_day-1) + hours(tle_parsed$end_man_hour) + minutes(tle_parsed$end_man_min)
+  days(tle_parsed$end_man_day) + hours(tle_parsed$end_man_hour) + minutes(tle_parsed$end_man_min)
 
 # View the tle_parsed
 print(tle_parsed)

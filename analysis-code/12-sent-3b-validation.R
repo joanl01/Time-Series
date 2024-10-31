@@ -1,7 +1,7 @@
 #join the manoeuvre flags
 sent3b_anom <- inner_join(sent3b_res, sent3b_res_data, by = "date")
 # Parameters
-bin_size <- 3  # Number of adjacent time points to combine in each bin
+bin_size <- 5  # Number of adjacent time points to combine in each bin
 
 # List of variables to analyze based on the flag column names
 variables <- c("eccentricity", "argument of perigee", "inclination", "mean anomaly", "Brouwer mean motion", "right ascension")
