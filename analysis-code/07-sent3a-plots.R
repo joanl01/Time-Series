@@ -10,7 +10,6 @@ variables <- c("flag_eccentricity", "flag_argument of perigee", "flag_inclinatio
 
 # Initialize lists to store plots for each variable
 roc_plots <- list()
-pr_plots <- list()
 auc <- list()
 # Loop through `length<-.factor`()# Loop through each variable to calculate and plot ROC and Precision-Recall curves
 for (var in variables) {
@@ -37,6 +36,26 @@ print(roc_plots)
 auc
 
 
+bmm_roc_obj <- roc(sent3a_binned_anom$true_maneuver,sent3a_binned_anom$`flag_Brouwer mean motion`)
+bmm_roc <- ggroc(bmm_roc_obj, legacy.axes = TRUE) + ggtitle("ROC Curve for Brouwer mean motion for Sentinel-3A")  + theme_bw() + theme(
+               plot.title = element_text(size = 30),
+               axis.title = element_text(size = 30),
+               axis.text = element_text(size = 30)
+             ) + labs(
+               y = "True Positive Rate (TPR)",
+               x = "False Positive Rate (FPR)"
+             ) +
+  geom_segment(aes(x=0, xend=1, y=0, yend=1), color="grey", linetype="dashed")
+bmm_roc
+
+
+ggsave(here::here("pretty-pictures", "Validation-plots", "BMM-sent3a-ROC.pdf"),
+       width = 16,
+       height = 9,
+       units = "in",
+       plot = bmm_roc)
+
 plot(pr.curve(sent3a_binned_anom$`flag_Brouwer mean motion`,
               sent3a_binned_anom$true_maneuver, curve = TRUE),
-     main = "Precision-Recall Curve for Brouwer mean motion")
+     main = "Precision-Recall Curve for Brouwer mean motion", cex.lab= 2, cex.axis=2, cex.main = 2)
+

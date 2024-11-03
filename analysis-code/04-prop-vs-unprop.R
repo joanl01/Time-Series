@@ -13,6 +13,8 @@ sent3a_prop <- sent3a_prop[-1:-300,]
 sent6a_prop <- sent6a_prop[-1:-23,]
 sent3b_prop <- sent3b_prop[-1:-230,]
 
+
+sent3a_prop <- sent3a_prop %>% mutate(year = year(...1)) %>% filter(year < 2022)
 # Take the difference between unpropagated and propagated
 sent3a_res <- sent3a - sent3a_prop
 sent3b_res <- sent3b - sent3b_prop

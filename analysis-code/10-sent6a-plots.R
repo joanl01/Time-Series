@@ -37,6 +37,26 @@ print(roc_plots)
 auc
 
 
+bmm_roc_obj <- roc(sent6a_binned_anom$true_maneuver,sent6a_binned_anom$`flag_Brouwer mean motion`)
+bmm_roc <- ggroc(bmm_roc_obj, legacy.axes = TRUE) + ggtitle("ROC Curve for Brouwer mean motion for Sentinel-6A")  + theme_bw() + theme(
+  plot.title = element_text(size = 30),
+  axis.title = element_text(size = 30),
+  axis.text = element_text(size = 30)
+) + labs(
+  y = "True Positive Rate (TPR)",
+  x = "False Positive Rate (FPR)"
+) +
+  geom_segment(aes(x=0, xend=1, y=0, yend=1), color="grey", linetype="dashed")
+bmm_roc
+
+
+ggsave(here::here("pretty-pictures", "Validation-plots", "BMM-sent6a-ROC.pdf"),
+       width = 16,
+       height = 9,
+       units = "in",
+       plot = bmm_roc)
+
 plot(pr.curve(sent6a_binned_anom$`flag_Brouwer mean motion`,
               sent6a_binned_anom$true_maneuver, curve = TRUE),
-     main = "Precision-Recall Curve for Brouwer mean motion")
+     main = "Precision-Recall Curve for Brouwer mean motion", cex.lab= 2, cex.axis=2, cex.main = 2)
+
