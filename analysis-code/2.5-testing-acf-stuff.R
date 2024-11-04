@@ -104,4 +104,3 @@ plot(sent6a_bmm_diff_pacf, main = "PACF plot of Mean Anomaly after first differe
 adf.test(sent6a_bmm_diff)
 
 
-
